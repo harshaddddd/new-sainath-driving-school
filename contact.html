@@ -10,69 +10,107 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     .page-hero { padding: 160px 0 80px; background: linear-gradient(135deg, #1a0000 0%, #3a0a0a 100%); }
-    .page-hero h1 { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; color: var(--white); margin-bottom: 16px; }
+    .page-hero h1 { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; color: #fff; margin-bottom: 16px; }
     .page-hero p { color: rgba(255,255,255,0.75); font-size: 1.1rem; max-width: 540px; }
     .page-breadcrumb { display: flex; gap: 8px; align-items: center; margin-bottom: 20px; }
     .page-breadcrumb a, .page-breadcrumb span { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+    .page-breadcrumb a:hover { color: #FFD700; }
     .page-breadcrumb .sep { color: rgba(255,255,255,0.25); }
 
     .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start; }
     .contact-info { display: flex; flex-direction: column; gap: 20px; }
+
     .contact-info-card {
-      background: var(--white);
-      border-radius: var(--radius);
+      background: #fff;
+      border-radius: 16px;
       padding: 28px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--mid-gray);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      border: 1px solid #E0E0E0;
       display: flex;
       gap: 16px;
       align-items: flex-start;
       transition: all 0.3s ease;
     }
-    .contact-info-card:hover { transform: translateX(4px); border-color: var(--red); }
-    .contact-info-card--highlight { background: var(--red); color: var(--white); border-color: var(--red); }
+    .contact-info-card:hover { transform: translateX(4px); border-color: #E31E24; }
+    .contact-info-card.red-card { background: #E31E24; border-color: #E31E24; }
+    .contact-info-card.red-card h3,
+    .contact-info-card.red-card p { color: #fff; }
+    .contact-info-card.red-card a { color: #FFD700; font-weight: 700; font-size: 1.1rem; text-decoration: none; }
     .contact-icon { font-size: 1.8rem; flex-shrink: 0; }
-    .contact-info-card h3 { font-family: 'Outfit', sans-serif; font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
-    .contact-info-card p { font-size: 0.88rem; line-height: 1.65; }
-    .contact-info-card--highlight h3, .contact-info-card--highlight p { color: var(--white); }
-    .contact-info-card--highlight a { color: var(--gold); font-weight: 700; font-size: 1.1rem; }
+    .contact-info-card h3 { font-family: 'Outfit', sans-serif; font-size: 0.9rem; font-weight: 700; color: #111; margin-bottom: 6px; }
+    .contact-info-card p { font-size: 0.88rem; color: #444; line-height: 1.65; }
+    .small-link { color: #E31E24; font-size: 0.82rem; font-weight: 600; margin-top: 8px; display: inline-block; text-decoration: none; }
+    .small-link:hover { text-decoration: underline; }
 
-    /* FORM */
+    /* FORM CARD */
     .contact-form-wrap {
-      background: var(--white);
-      border-radius: var(--radius);
+      background: #fff;
+      border-radius: 16px;
       padding: 44px;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid var(--mid-gray);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.15);
+      border: 1px solid #E0E0E0;
     }
-    .form-title { font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--text-dark); margin-bottom: 8px; }
-    .form-sub { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 28px; }
+    .form-title { font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 800; color: #111; margin-bottom: 8px; }
+    .form-sub { font-size: 0.9rem; color: #888; margin-bottom: 28px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
-    .form-group label { font-family: 'Outfit', sans-serif; font-size: 0.82rem; font-weight: 600; color: var(--text-dark); }
-    .form-group input, .form-group select, .form-group textarea {
+    .form-group label { font-family: 'Outfit', sans-serif; font-size: 0.82rem; font-weight: 600; color: #111; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
       padding: 13px 16px;
-      border: 1.5px solid var(--mid-gray);
-      border-radius: var(--radius-sm);
+      border: 1.5px solid #E0E0E0;
+      border-radius: 8px;
       font-family: 'Open Sans', sans-serif;
       font-size: 0.9rem;
-      color: var(--text-dark);
-      background: var(--white);
+      color: #111;
+      background: #fff;
       transition: all 0.3s ease;
       outline: none;
+      width: 100%;
     }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      border-color: var(--red);
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #E31E24;
       box-shadow: 0 0 0 3px rgba(227,30,36,0.1);
     }
-    .form-group textarea { resize: vertical; min-height: 100px; }
-    .form-submit { width: 100%; padding: 16px; font-size: 1rem; border: none; border-radius: 50px; background: var(--red); color: var(--white); font-family: 'Outfit', sans-serif; font-weight: 700; cursor: pointer; transition: all 0.3s ease; margin-top: 8px; }
-    .form-submit:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(227,30,36,0.35); }
-    .form-note { font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 12px; }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-submit {
+      width: 100%;
+      padding: 16px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 50px;
+      background: #E31E24;
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 8px;
+    }
+    .form-submit:hover { background: #B8171C; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(227,30,36,0.35); }
+    .form-note { font-size: 0.78rem; color: #888; text-align: center; margin-top: 14px; }
+    .form-note a { color: #E31E24; font-weight: 600; text-decoration: none; }
 
-    /* Map section */
+    /* SUCCESS BOX */
+    .form-success {
+      display: none;
+      background: #f0fff4;
+      border: 2px solid #22c55e;
+      border-radius: 12px;
+      padding: 28px;
+      text-align: center;
+    }
+    .form-success .success-icon { font-size: 3rem; margin-bottom: 12px; }
+    .form-success h3 { font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 800; color: #16a34a; margin-bottom: 10px; }
+    .form-success p { font-size: 0.92rem; color: #444; line-height: 1.6; margin-bottom: 16px; }
+    .form-success a { color: #E31E24; font-weight: 700; }
+
+    /* MAP */
     .map-section { margin-top: 60px; }
-    .map-section iframe { width: 100%; height: 400px; border: 0; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .map-section iframe { width: 100%; height: 400px; border: 0; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.10); display: block; }
 
     @media (max-width: 768px) {
       .contact-grid { grid-template-columns: 1fr; }
@@ -83,6 +121,7 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="index.html" class="logo-link">
@@ -116,21 +155,22 @@
         <a href="contact.html" class="nav-link active">Contact</a>
         <a href="tel:07775088754" class="btn btn-primary btn-sm">📞 Call Now</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
+  <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
       <div class="page-breadcrumb">
         <a href="index.html">Home</a>
         <span class="sep">›</span>
-        <span style="color:var(--gold)">Contact</span>
+        <span style="color:#FFD700;">Contact Us</span>
       </div>
-      <h1>Let's Get You<br><span style="color:var(--red)">On the Road</span></h1>
-      <p>Walk in, call us, or fill the form below. Our team will get back to you within a few hours.</p>
+      <h1>Let's Get You<br><span style="color:#E31E24;">On the Road</span></h1>
+      <p>Walk in, call us, or fill the form below. Our team responds within a few hours to confirm your admission.</p>
     </div>
   </section>
 
@@ -138,118 +178,194 @@
   <section class="section">
     <div class="container contact-grid">
 
-      <!-- INFO CARDS -->
+      <!-- LEFT: INFO -->
       <div class="contact-info">
-        <div class="contact-info-card contact-info-card--highlight">
+
+        <div class="contact-info-card red-card">
           <div class="contact-icon">📞</div>
           <div>
             <h3>Call Us Directly</h3>
-            <p>Speak with our team now for instant answers.<br><a href="tel:07775088754">077750 88754</a></p>
+            <p>Speak to our team for instant answers about admissions and schedules.</p>
+            <a href="tel:07775088754">077750 88754</a>
           </div>
         </div>
+
         <div class="contact-info-card">
           <div class="contact-icon">📍</div>
           <div>
             <h3>Our Location</h3>
             <p>Shop No. 4, Masulkar Residency,<br>Near Apple Hospital,<br>Lohegaon, Pune — 411047</p>
-            <a href="https://maps.google.com/?q=New+Shree+Sainath+Driving+School+Lohegaon+Pune" target="_blank" style="color:var(--red); font-size:0.82rem; font-weight:600; margin-top:8px; display:inline-block;">Open in Google Maps →</a>
+            <a href="https://maps.google.com/?q=New+Shree+Sainath+Driving+School+Lohegaon+Pune" target="_blank" class="small-link">Open in Google Maps →</a>
           </div>
         </div>
+
         <div class="contact-info-card">
           <div class="contact-icon">🕐</div>
           <div>
             <h3>Working Hours</h3>
-            <p><strong>Monday – Saturday:</strong> 7:00 AM – 7:00 PM<br><strong>Sunday:</strong> By Appointment Only</p>
+            <p>
+              <strong>Monday – Saturday:</strong><br>7:00 AM – 7:00 PM<br><br>
+              <strong>Sunday:</strong> By Appointment Only
+            </p>
           </div>
         </div>
+
         <div class="contact-info-card">
           <div class="contact-icon">💬</div>
           <div>
-            <h3>WhatsApp</h3>
-            <p>Prefer messaging? Send us a WhatsApp and we'll reply quickly.</p>
-            <a href="https://wa.me/917775088754?text=Hi%20Sainath%20Driving%20School%2C%20I%20am%20interested%20in%20driving%20classes" target="_blank" style="color:var(--red); font-size:0.82rem; font-weight:600; margin-top:8px; display:inline-block;">Message on WhatsApp →</a>
+            <h3>WhatsApp Us</h3>
+            <p>Prefer messaging? Send us a WhatsApp — we reply quickly during office hours.</p>
+            <a href="https://wa.me/917775088754?text=Hi%20Sainath%20Driving%20School%2C%20I%20want%20to%20enquire%20about%20driving%20classes." target="_blank" class="small-link">Open WhatsApp Chat →</a>
           </div>
         </div>
+
       </div>
 
-      <!-- CONTACT FORM (Netlify) -->
+      <!-- RIGHT: FORM -->
       <div class="contact-form-wrap">
         <div class="form-title">Send Us a Message</div>
-        <div class="form-sub">Fill in your details and we'll call you back to schedule your session.</div>
+        <div class="form-sub">Fill in your details below. We'll call you back to schedule your session.</div>
 
-        <!-- NETLIFY FORM: name="contact" data-netlify="true" enables Netlify Forms -->
-        <form name="contact" method="POST" data-netlify="true" action="/thank-you.html">
+        <!--
+          ════════════════════════════════════════════
+          FORM NOTES FOR YOU:
+          ────────────────────────────────────────────
+          LOCALLY (Live Server / VS Code):
+            → When you click Submit, you'll see a green
+              success message on the same page.
+              No data actually sends locally — this is normal.
+
+          ON NETLIFY (after you deploy):
+            → Netlify detects data-netlify="true" and
+              automatically captures every form submission.
+            → After submit, user is redirected to thank-you.html
+            → You can see all submissions in:
+               Netlify Dashboard → Your Site → Forms → contact
+            → To get email alerts:
+               Site Settings → Forms → Email Notifications
+            → To download CSV:
+               Forms → contact → Export submissions
+          ════════════════════════════════════════════
+        -->
+        <form id="contactForm"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              action="thank-you.html">
+
+          <!-- Required by Netlify -->
           <input type="hidden" name="form-name" value="contact" />
+          <!-- Honeypot spam protection -->
+          <div style="display:none;"><input name="bot-field" /></div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Full Name *</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required />
+              <label for="fname">Full Name *</label>
+              <input type="text" id="fname" name="name" placeholder="Your full name" required />
             </div>
             <div class="form-group">
-              <label for="phone">Phone Number *</label>
-              <input type="tel" id="phone" name="phone" placeholder="Your mobile number" required />
+              <label for="fphone">Phone Number *</label>
+              <input type="tel" id="fphone" name="phone" placeholder="10-digit mobile number" required />
             </div>
           </div>
 
           <div class="form-group">
-            <label for="email">Email Address (optional)</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" />
+            <label for="femail">Email Address (optional)</label>
+            <input type="email" id="femail" name="email" placeholder="your@email.com" />
           </div>
 
           <div class="form-group">
-            <label for="service">What are you looking for? *</label>
-            <select id="service" name="service" required>
-              <option value="">— Select a service —</option>
-              <option value="learners-license">Learner's License Help</option>
-              <option value="15-day-training">15-Day Training Program</option>
-              <option value="30-day-training">30-Day Comprehensive Program</option>
-              <option value="advanced-driving">Advanced / Highway Driving</option>
-              <option value="permanent-license">Permanent License Assistance</option>
-              <option value="renewal">License Renewal</option>
-              <option value="other">Other / Not Sure</option>
+            <label for="fservice">What are you looking for? *</label>
+            <select id="fservice" name="service" required>
+              <option value="">— Please select a service —</option>
+              <option value="Learner's License Help">Learner's License Help</option>
+              <option value="15-Day Training Program">15-Day Training Program</option>
+              <option value="30-Day Comprehensive Program">30-Day Comprehensive Program</option>
+              <option value="Advanced / Highway Driving">Advanced / Highway Driving</option>
+              <option value="Permanent License Assistance">Permanent License Assistance</option>
+              <option value="License Renewal">License Renewal</option>
+              <option value="Other / Not Sure">Other / Not Sure</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="timing">Preferred Batch Timing</label>
-            <select id="timing" name="timing">
+            <label for="ftiming">Preferred Batch Timing</label>
+            <select id="ftiming" name="timing">
               <option value="">— Select preferred time —</option>
-              <option value="early-morning">Early Morning (7AM – 9AM)</option>
-              <option value="morning">Morning (9AM – 12PM)</option>
-              <option value="afternoon">Afternoon (12PM – 4PM)</option>
-              <option value="evening">Evening (4PM – 7PM)</option>
-              <option value="weekend">Weekends Only</option>
-              <option value="flexible">I'm Flexible</option>
+              <option value="Early Morning 7AM-9AM">Early Morning (7AM – 9AM)</option>
+              <option value="Morning 9AM-12PM">Morning (9AM – 12PM)</option>
+              <option value="Afternoon 12PM-4PM">Afternoon (12PM – 4PM)</option>
+              <option value="Evening 4PM-7PM">Evening (4PM – 7PM)</option>
+              <option value="Weekends Only">Weekends Only</option>
+              <option value="Flexible">I'm Flexible</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="message">Any Questions or Details</label>
-            <textarea id="message" name="message" placeholder="E.g. I'm a first-time learner, I have a Maruti Alto, I want to start next week..."></textarea>
+            <label for="fmessage">Additional Details (optional)</label>
+            <textarea id="fmessage" name="message" placeholder="E.g. I am a first-time learner. I want to start next week. I have a Maruti Alto..."></textarea>
           </div>
 
           <button type="submit" class="form-submit">Send My Enquiry →</button>
-          <p class="form-note">📞 Prefer calling? Ring us at <a href="tel:07775088754" style="color:var(--red); font-weight:600;">077750 88754</a> and we'll answer right away.</p>
+
+          <p class="form-note">
+            📞 Prefer calling? Reach us directly at
+            <a href="tel:07775088754">077750 88754</a>
+          </p>
         </form>
+
+        <!-- SUCCESS MESSAGE — shown only when running locally -->
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">🎉</div>
+          <h3>Message Sent Successfully!</h3>
+          <p>
+            Thank you for reaching out to <strong>New Shree Sainath Driving School</strong>.<br>
+            Our team will call you back shortly to confirm your enrollment and answer your questions.
+          </p>
+          <a href="index.html" class="btn btn-primary btn-sm">← Back to Home</a>
+        </div>
+
       </div>
     </div>
 
-    <!-- MAP -->
+    <!-- GOOGLE MAP -->
     <div class="container map-section">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.7!2d73.9318!3d18.5920!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3e3e3e3e3e3%3A0x0!2sNew+Shree+Sainath+Driving+School%2C+Masulkar+Residency%2C+Lohegaon%2C+Pune!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        title="New Shree Sainath Driving School - Lohegaon Pune Location">
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.134520967887!2d73.93040557503315!3d18.591086982523073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1498a329619%3A0x4fcbe02a7eb13c21!2sNew%20Shree%20Sainath%20Driving%20School!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="New Shree Sainath Driving School - Lohegaon, Pune">
       </iframe>
     </div>
   </section>
 
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div class="cta-text">
+        <h2>Ready to Get Your License?</h2>
+        <p>Join 2,500+ successful students from Lohegaon and surrounding areas.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="tel:07775088754" class="btn btn-white btn-lg">📞 077750 88754</a>
+        <a href="https://wa.me/917775088754" target="_blank" class="btn btn-outline-white btn-lg">💬 WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
         <div class="footer-logo-text">New Shree Sainath<br>Driving School</div>
         <p>Lohegaon's most trusted driving school. Building confident, responsible drivers since 2010.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="https://wa.me/917775088754" aria-label="WhatsApp">💬</a>
+        </div>
       </div>
       <div class="footer-links">
         <h4>Quick Links</h4>
@@ -263,7 +379,9 @@
         <h4>Services</h4>
         <a href="training.html">Beginner Training</a>
         <a href="training.html">Advanced Driving</a>
-        <a href="rto.html">RTO Assistance</a>
+        <a href="rto.html">Learner's License</a>
+        <a href="rto.html">Permanent License</a>
+        <a href="rto.html">License Renewal</a>
       </div>
       <div class="footer-contact">
         <h4>Contact</h4>
@@ -272,10 +390,48 @@
         <p>🕐 Mon–Sat: 7AM – 7PM</p>
       </div>
     </div>
-    <div class="footer-bottom"><div class="container"><p>© 2024 New Shree Sainath Driving School. All rights reserved. | Lohegaon, Pune</p></div></div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2024 New Shree Sainath Driving School. All rights reserved. | Lohegaon, Pune</p>
+      </div>
+    </div>
   </footer>
 
+  <!-- MOBILE STICKY CALL -->
   <a href="tel:07775088754" class="sticky-call">📞 Call Now</a>
+
   <script src="script.js"></script>
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        const name    = document.getElementById('fname').value.trim();
+        const phone   = document.getElementById('fphone').value.trim();
+        const service = document.getElementById('fservice').value;
+
+        // Validation
+        if (!name) { alert('Please enter your full name.'); e.preventDefault(); return; }
+        if (!phone || phone.length < 10) { alert('Please enter a valid 10-digit phone number.'); e.preventDefault(); return; }
+        if (!service) { alert('Please select the service you are looking for.'); e.preventDefault(); return; }
+
+        // Detect if running locally
+        const isLocal =
+          window.location.hostname === 'localhost' ||
+          window.location.hostname === '127.0.0.1' ||
+          window.location.protocol === 'file:';
+
+        if (isLocal) {
+          // Show green success box locally instead of submitting
+          e.preventDefault();
+          contactForm.style.display = 'none';
+          formSuccess.style.display  = 'block';
+          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        // On Netlify: submits normally → redirects to thank-you.html
+      });
+    }
+  </script>
 </body>
 </html>
