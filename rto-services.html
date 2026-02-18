@@ -3,208 +3,323 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RTO Services | New Shree Sainath Driving School Lohegaon Pune</title>
-  <meta name="description" content="Complete RTO procedure support — Learner License, Driving License, documentation, slot booking. Sainath Driving School near Apple Hospital, Lohegaon." />
+  <title>RTO Services | New Shree Sainath Driving School Lohegaon</title>
+  <meta name="description" content="Complete RTO assistance in Lohegaon Pune. Learner's license, permanent license, renewal, transfer. Expert guidance near Apple Hospital." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      padding: 160px 0 80px;
+      background: linear-gradient(135deg, #0d0d2b 0%, #1a1a4a 100%);
+    }
+    .page-hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .page-hero p {
+      color: rgba(255,255,255,0.75);
+      font-size: 1.1rem;
+      max-width: 540px;
+    }
+    .page-breadcrumb {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .page-breadcrumb a,
+    .page-breadcrumb span {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .page-breadcrumb a:hover { color: var(--gold); }
+    .page-breadcrumb .sep { color: rgba(255,255,255,0.25); }
+
+    .rto-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .rto-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--red);
+      transition: all 0.3s ease;
+    }
+    .rto-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .rto-card-icon { font-size: 2.5rem; margin-bottom: 16px; }
+    .rto-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+    .rto-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.65;
+    }
+    .rto-card ul { list-style: none; }
+    .rto-card ul li {
+      font-size: 0.87rem;
+      color: var(--text-body);
+      padding: 5px 0;
+      display: flex;
+      gap: 8px;
+    }
+    .rto-card ul li::before { content: '→'; color: var(--red); flex-shrink: 0; }
+
+    .docs-table { width: 100%; border-collapse: collapse; margin-top: 24px; }
+    .docs-table th {
+      background: var(--red);
+      color: var(--white);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 14px 20px;
+      text-align: left;
+    }
+    .docs-table td {
+      padding: 12px 20px;
+      font-size: 0.88rem;
+      border-bottom: 1px solid var(--mid-gray);
+      vertical-align: top;
+    }
+    .docs-table tr:hover td { background: var(--light-gray); }
+    .docs-table td:first-child { font-weight: 600; color: var(--text-dark); white-space: nowrap; }
+
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--mid-gray); }
+    .faq-q {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      gap: 16px;
+    }
+    .faq-q:hover { color: var(--red); }
+    .faq-icon { font-size: 1.2rem; transition: transform 0.3s ease; flex-shrink: 0; }
+    .faq-a {
+      padding-bottom: 16px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      display: none;
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+  </style>
 </head>
 <body>
 
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="index.html" class="logo-link">
-        <svg class="logo-svg" viewBox="0 0 220 90" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 45 Q5 30 20 25 Q35 35 45 45 Q35 42 25 45Z" fill="#E31E24"/>
-          <path d="M205 45 Q215 30 200 25 Q185 35 175 45 Q185 42 195 45Z" fill="#E31E24"/>
-          <circle cx="110" cy="45" r="28" fill="none" stroke="#1a1a1a" stroke-width="5"/>
-          <line x1="110" y1="17" x2="110" y2="33" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
-          <line x1="110" y1="57" x2="110" y2="73" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
-          <line x1="82" y1="45" x2="98" y2="45" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
-          <line x1="122" y1="45" x2="138" y2="45" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
-          <circle cx="110" cy="45" r="7" fill="#E31E24"/>
-          <path d="M72 30 Q110 10 148 30" fill="#E31E24"/>
-          <text x="110" y="28" text-anchor="middle" font-family="Outfit" font-size="8" fill="#FFD700" font-weight="700">Learn to fly...!</text>
-          <rect x="55" y="72" width="110" height="14" rx="3" fill="#1a1a1a"/>
-          <text x="110" y="82" text-anchor="middle" font-family="Outfit" font-size="6.5" fill="#ffffff" font-weight="600" letter-spacing="0.5">NEW SHREE SAINATH</text>
-        </svg>
-        <span class="logo-text">Sainath <span>Driving School</span></span>
+        <div class="logo-svg-wrap">
+          <svg viewBox="0 0 220 90" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+            <path d="M10,45 Q30,20 55,38" stroke="#E31E24" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M15,50 Q33,28 55,42" stroke="#FFD700" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M210,45 Q190,20 165,38" stroke="#E31E24" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M205,50 Q187,28 165,42" stroke="#FFD700" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="110" cy="45" r="26" fill="none" stroke="#1a1a1a" stroke-width="5"/>
+            <circle cx="110" cy="45" r="8" fill="#1a1a1a"/>
+            <line x1="110" y1="19" x2="110" y2="37" stroke="#1a1a1a" stroke-width="4"/>
+            <line x1="86" y1="57" x2="103" y2="49" stroke="#1a1a1a" stroke-width="4"/>
+            <line x1="134" y1="57" x2="117" y2="49" stroke="#1a1a1a" stroke-width="4"/>
+            <path d="M70,28 Q110,8 150,28" fill="#E31E24"/>
+            <text x="110" y="26" text-anchor="middle" font-family="Outfit,sans-serif" font-size="7" fill="#FFD700" font-weight="700">LEARN TO FLY...!</text>
+            <rect x="58" y="68" width="104" height="14" rx="2" fill="#1a1a1a"/>
+            <text x="110" y="78" text-anchor="middle" font-family="Outfit,sans-serif" font-size="5.5" fill="#FFFFFF" font-weight="700" letter-spacing="0.5">NEW SHREE SAINATH</text>
+          </svg>
+        </div>
+        <div class="logo-text-block">
+          <span class="logo-main">Sainath Driving</span>
+          <span class="logo-sub">School · Lohegaon</span>
+        </div>
       </a>
       <nav class="nav" id="nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="training.html" class="nav-link">Training</a>
-        <a href="rto-services.html" class="nav-link active">RTO Services</a>
+        <a href="rto.html" class="nav-link active">RTO Services</a>
         <a href="team.html" class="nav-link">Our Team</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="tel:07775088754" class="btn btn-primary nav-cta">📞 Call Now</a>
+        <a href="tel:07775088754" class="btn btn-primary btn-sm">📞 Call Now</a>
       </nav>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
   <section class="page-hero">
     <div class="container">
-      <span class="section-tag" style="margin-bottom:16px;display:inline-block;">RTO Services</span>
-      <h1>We Handle the <span class="highlight">RTO Paperwork</span> — You Just Show Up</h1>
-      <p>The most stressful part of getting a license is not the driving — it's the government procedures. We take care of all of it for you.</p>
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">›</span>
+        <span style="color:var(--gold)">RTO Services</span>
+      </div>
+      <h1>RTO Services<br><span style="color:var(--red)">We Do the Hard Part</span></h1>
+      <p>The Pune RTO process can be confusing. We guide you through every form, every slot, and every step — so you get your license stress-free.</p>
     </div>
   </section>
 
-  <!-- WHY RTO IS CONFUSING -->
+  <!-- RTO SERVICES GRID -->
   <section class="section">
     <div class="container">
-      <div class="why-grid">
-        <div class="why-content">
-          <span class="section-tag">The Problem We Solve</span>
-          <h2 class="section-title">RTO Procedures Are <span class="highlight">Confusing.</span> We Simplify Them.</h2>
-          <p class="why-desc">Most people delay getting their driving license not because they can't drive — but because the RTO process feels overwhelming. Online applications, document lists, slot booking, tests, fees, and multiple visits. We handle every single step.</p>
-          <div class="why-points">
-            <div class="why-point">
-              <div class="why-icon">📋</div>
-              <div>
-                <strong>Document Checklist &amp; Verification</strong>
-                <p>We tell you exactly which documents you need, verify them in advance, and ensure nothing is missing before your RTO visit.</p>
-              </div>
-            </div>
-            <div class="why-point">
-              <div class="why-icon">💻</div>
-              <div>
-                <strong>Online Application &amp; Slot Booking</strong>
-                <p>Sarathi portal applications, slot booking, fee payment — all handled by our team. No confusing websites for you to navigate.</p>
-              </div>
-            </div>
-            <div class="why-point">
-              <div class="why-icon">🎯</div>
-              <div>
-                <strong>First-Attempt Focus</strong>
-                <p>Our mock RTO tests and thorough preparation mean most students pass on the very first attempt — no retakes, no delays.</p>
-              </div>
-            </div>
-          </div>
+      <div class="section-label">Our RTO Services</div>
+      <h2 class="section-title">Every License Service<br><span class="highlight-red">Handled for You</span></h2>
+      <div class="rto-grid">
+        <div class="rto-card">
+          <div class="rto-card-icon">📋</div>
+          <h3>Learner's License (LL)</h3>
+          <p>Complete first-time LL application support from document preparation to test day.</p>
+          <ul>
+            <li>Form 1 &amp; Form 2 filling</li>
+            <li>Document checklist guidance</li>
+            <li>Online slot booking help</li>
+            <li>Mock written test practice</li>
+            <li>Test-day guidance</li>
+          </ul>
         </div>
-        <div class="why-visual">
-          <div class="trust-badge-card">
-            <div class="trust-badge-stars">✅✅✅✅✅</div>
-            <div class="trust-badge-count" style="font-size:1.2rem;">End-to-End RTO Support</div>
-            <div class="trust-badge-sub">From your first document to your final license in hand</div>
-            <div class="trust-badge-divider"></div>
-            <div class="trust-badge-quote">"Sachin Sir handled every single document. I didn't have to visit the RTO even once on my own. Got my DL without any issues."</div>
-            <div class="trust-badge-author">— Verified Google Review</div>
-          </div>
+        <div class="rto-card">
+          <div class="rto-card-icon">🪪</div>
+          <h3>Permanent Driving License</h3>
+          <p>After completing training, we assist you with the full DL application and RTO slot.</p>
+          <ul>
+            <li>DL application form support</li>
+            <li>RTO appointment booking</li>
+            <li>Practical test preparation</li>
+            <li>Test-day route coaching</li>
+            <li>Post-test follow-up</li>
+          </ul>
+        </div>
+        <div class="rto-card">
+          <div class="rto-card-icon">🔄</div>
+          <h3>License Renewal</h3>
+          <p>Expired license? We handle the renewal process quickly with minimal visits to the RTO.</p>
+          <ul>
+            <li>Renewal form guidance</li>
+            <li>Medical certificate support</li>
+            <li>Online or offline filing</li>
+            <li>Status tracking</li>
+          </ul>
+        </div>
+        <div class="rto-card">
+          <div class="rto-card-icon">📦</div>
+          <h3>License Transfer</h3>
+          <p>Relocated to Pune? We assist with out-of-state and within-Maharashtra DL transfers.</p>
+          <ul>
+            <li>NOC guidance from previous RTO</li>
+            <li>Pune RTO registration</li>
+            <li>Address change support</li>
+          </ul>
+        </div>
+        <div class="rto-card">
+          <div class="rto-card-icon">📝</div>
+          <h3>Vehicle Registration Help</h3>
+          <p>New vehicle or transfer of ownership? We guide you through RC-related procedures.</p>
+          <ul>
+            <li>RC transfer documentation</li>
+            <li>Form 28, 29, 30 guidance</li>
+            <li>Hypothecation support</li>
+          </ul>
+        </div>
+        <div class="rto-card">
+          <div class="rto-card-icon">🏥</div>
+          <h3>Medical Certificate Support</h3>
+          <p>We help you get the required Form 1A medical certificate for license applications and renewals.</p>
+          <ul>
+            <li>Explain Form 1A requirements</li>
+            <li>Connect with nearby doctors</li>
+            <li>Document verification</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STEP-BY-STEP RTO PROCESS -->
-  <section class="section bg-light">
+  <!-- DOCUMENTS TABLE -->
+  <section class="section section-gray">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Our RTO Process</span>
-        <h2 class="section-title">Step-by-Step: <span class="highlight">From Zero to License</span></h2>
-        <p class="section-sub">Here is exactly how we guide you through the complete RTO licensing process in Pune.</p>
-      </div>
-      <div class="rto-steps">
-        <div class="rto-step">
-          <div class="rto-step-num">01</div>
-          <div class="rto-step-content">
-            <h3>📋 Initial Consultation &amp; Document Collection</h3>
-            <p>You visit our office at Shop No. 4, Masulkar Residency. Our team explains the full process, collects your documents (Aadhar, PAN, Passport Photo, Address Proof), verifies them, and creates a complete file so nothing is ever missing.</p>
-          </div>
-        </div>
-        <div class="rto-step">
-          <div class="rto-step-num">02</div>
-          <div class="rto-step-content">
-            <h3>💻 Online Application on Sarathi Portal</h3>
-            <p>We fill out your complete online application on the Government of India's Sarathi portal. We handle the form, upload your documents, and pay the fees — all without you needing to touch a government website.</p>
-          </div>
-        </div>
-        <div class="rto-step">
-          <div class="rto-step-num">03</div>
-          <div class="rto-step-content">
-            <h3>🕐 Slot Booking for Learner's License Test</h3>
-            <p>We book the earliest available LL test slot at the Pune RTO for you. We then give you a mock LL test with actual questions to prepare you — so you walk into the test with full confidence.</p>
-          </div>
-        </div>
-        <div class="rto-step">
-          <div class="rto-step-num">04</div>
-          <div class="rto-step-content">
-            <h3>🚗 Practical Training Period (15 or 30 Days)</h3>
-            <p>After your LL is issued, we begin your practical training. Over 15 or 30 days, you train daily on actual Pune roads with our expert instructors. Simultaneously, we begin your DL application process.</p>
-          </div>
-        </div>
-        <div class="rto-step">
-          <div class="rto-step-num">05</div>
-          <div class="rto-step-content">
-            <h3>📄 Driving License Application &amp; Slot Booking</h3>
-            <p>After your mandatory waiting period, we file your DL application online, gather the updated documents, and book your DL test slot at the RTO.</p>
-          </div>
-        </div>
-        <div class="rto-step">
-          <div class="rto-step-num">06</div>
-          <div class="rto-step-content">
-            <h3>🏅 Final Test Support &amp; License Collection</h3>
-            <p>We accompany you on your test day. After you pass (which our students almost always do on the first attempt), we track your license dispatch and keep you updated until the physical card is in your hands.</p>
-          </div>
-        </div>
+      <div class="section-label">Be Prepared</div>
+      <h2 class="section-title">Documents You'll<br><span class="highlight-red">Need to Bring</span></h2>
+      <p class="section-sub">Don't worry — we'll confirm the exact checklist when you call us. This is a general guide.</p>
+      <div style="overflow-x:auto;">
+        <table class="docs-table">
+          <thead>
+            <tr>
+              <th>Document</th>
+              <th>For LL</th>
+              <th>For DL</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Aadhaar Card</td><td>✅ Required</td><td>✅ Required</td><td>Original + 1 photocopy</td></tr>
+            <tr><td>Passport Size Photos</td><td>✅ 3 photos</td><td>✅ 3 photos</td><td>White background, recent</td></tr>
+            <tr><td>Address Proof</td><td>✅ Required</td><td>✅ Required</td><td>Aadhaar serves as both ID + address</td></tr>
+            <tr><td>Age Proof</td><td>✅ Required</td><td>✅ Required</td><td>10th Marksheet or Birth Certificate</td></tr>
+            <tr><td>Learner's License</td><td>❌ Not needed</td><td>✅ Required</td><td>Must be at least 30 days old</td></tr>
+            <tr><td>Medical Certificate (Form 1A)</td><td>✅ Required</td><td>✅ Required</td><td>We help you get this</td></tr>
+            <tr><td>Application Fee</td><td>✅ As per RTO</td><td>✅ As per RTO</td><td>We'll inform exact amount</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
-  <!-- DOCUMENTS NEEDED -->
+  <!-- FAQ -->
   <section class="section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">What You Need</span>
-        <h2 class="section-title">Documents Required for <span class="highlight">Learner's License</span></h2>
-      </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🪪</div>
-          <h3>Identity Proof (Any One)</h3>
-          <ul class="service-list">
-            <li>Aadhar Card</li>
-            <li>Passport</li>
-            <li>Voter ID Card</li>
-            <li>PAN Card</li>
-          </ul>
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title" style="text-align:center;margin-bottom:40px">Frequently Asked<br><span class="highlight-red">Questions</span></h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">How long does it take to get a Learner's License in Pune? <span class="faq-icon">+</span></div>
+          <div class="faq-a">With our assistance, the LL process typically takes 7–10 days from the day you apply. We help with online slot booking and the written test is usually cleared on the same day at the RTO.</div>
         </div>
-        <div class="service-card featured">
-          <div class="featured-badge">Most Common</div>
-          <div class="service-icon">📋</div>
-          <h3>Address Proof (Any One)</h3>
-          <ul class="service-list">
-            <li>Aadhar Card (with current address)</li>
-            <li>Utility Bill (Electricity/Water)</li>
-            <li>Ration Card</li>
-            <li>Bank Passbook (with address)</li>
-          </ul>
+        <div class="faq-item">
+          <div class="faq-q">Can I apply for a Permanent License without a Learner's License? <span class="faq-icon">+</span></div>
+          <div class="faq-a">No. The Learner's License is mandatory and must be at least 30 days old before you can apply for a Permanent DL. We'll guide you through the LL first, then DL.</div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">📸</div>
-          <h3>Other Requirements</h3>
-          <ul class="service-list">
-            <li>3 Passport-size Photographs</li>
-            <li>Age Proof (Birth Certificate / Marksheet)</li>
-            <li>Medical Certificate (Form 1A)</li>
-            <li>RTO Application Fee</li>
-          </ul>
+        <div class="faq-item">
+          <div class="faq-q">Do you accompany students to the RTO for the practical test? <span class="faq-icon">+</span></div>
+          <div class="faq-a">Yes. Our trainers prepare you extensively for the test route and we support you on test day with coaching on what to expect, how to handle the test vehicle, and the exact maneuvers required.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What is the minimum age to apply for a driving license in India? <span class="faq-icon">+</span></div>
+          <div class="faq-a">You must be at least 16 years old for a Gearless 2-Wheeler (with parent consent) and 18 years for a Car or Geared 2-Wheeler. We can guide you based on your age and vehicle type.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">My license expired. Can you help with renewal? <span class="faq-icon">+</span></div>
+          <div class="faq-a">Absolutely. We regularly assist with license renewals. If expired within 5 years, the process is straightforward. Beyond 5 years, there may be additional requirements. Call us to assess your situation.</div>
         </div>
       </div>
-      <p style="text-align:center;color:#777;margin-top:32px;font-size:0.92rem;">Don't worry about organizing these — just bring your documents to us and we will sort, verify, and prepare everything.</p>
     </div>
   </section>
 
   <section class="cta-banner">
     <div class="container cta-inner">
       <div class="cta-text">
-        <h2>Let's Start Your License Journey</h2>
-        <p>Call or WhatsApp us today. We'll tell you exactly what to bring and handle everything else.</p>
+        <h2>Need RTO Help?</h2>
+        <p>Call us and we'll tell you exactly what you need and when to come.</p>
       </div>
       <div class="cta-actions">
-        <a href="contact.html" class="btn btn-cta-white">Book Free Consultation</a>
-        <a href="tel:07775088754" class="btn btn-cta-outline">📞 077750 88754</a>
+        <a href="contact.html" class="btn btn-white btn-lg">Contact Us</a>
+        <a href="tel:07775088754" class="btn btn-outline-white btn-lg">📞 077750 88754</a>
       </div>
     </div>
   </section>
@@ -212,42 +327,51 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <p class="footer-brand-name">New Shree Sainath<br/><span>Driving School</span></p>
-        <p class="footer-tagline">Building confident drivers in Lohegaon since 2008.</p>
+        <div class="footer-logo-text">New Shree Sainath<br>Driving School</div>
+        <p>Lohegaon's most trusted driving school. Building confident, responsible drivers since 2010.</p>
       </div>
       <div class="footer-links">
         <h4>Quick Links</h4>
         <a href="index.html">Home</a>
         <a href="training.html">Training Programs</a>
-        <a href="rto-services.html">RTO Services</a>
+        <a href="rto.html">RTO Services</a>
         <a href="team.html">Our Team</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Contact Us</a>
       </div>
       <div class="footer-links">
-        <h4>RTO Services</h4>
-        <a href="rto-services.html">Learner's License</a>
-        <a href="rto-services.html">DL Application</a>
-        <a href="rto-services.html">Documentation</a>
-        <a href="rto-services.html">Test Preparation</a>
+        <h4>RTO Help</h4>
+        <a href="rto.html">Learner's License</a>
+        <a href="rto.html">Permanent License</a>
+        <a href="rto.html">License Renewal</a>
+        <a href="rto.html">License Transfer</a>
       </div>
       <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p>📍 Shop No. 4, Masulkar Residency,<br/>Near Apple Hospital, Lohegaon, Pune</p>
+        <h4>Contact</h4>
+        <p>📍 Shop No. 4, Masulkar Residency,<br>Near Apple Hospital,<br>Lohegaon, Pune 411047</p>
         <p>📞 <a href="tel:07775088754">077750 88754</a></p>
-        <div class="footer-social">
-          <a href="https://wa.me/917775088754" class="social-btn whatsapp" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="tel:07775088754" class="social-btn call">Call Now</a>
-        </div>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2024 New Shree Sainath Driving School, Lohegaon, Pune. All rights reserved.</p>
+        <p>© 2024 New Shree Sainath Driving School. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <a href="tel:07775088754" class="sticky-call">📞 Call Now — 077750 88754</a>
-  <script src="js/script.js"></script>
+  <a href="tel:07775088754" class="sticky-call">📞 Call Now</a>
+  <script src="script.js"></script>
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-q').forEach(function(q) {
+      q.addEventListener('click', function() {
+        var item = q.parentElement;
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(i) {
+          i.classList.remove('open');
+        });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
 </body>
 </html>
