@@ -4,219 +4,342 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Training Programs | New Shree Sainath Driving School Lohegaon</title>
-  <meta name="description" content="15-day and 30-day driving courses, highway training, and advanced modules at Sainath Driving School, Lohegaon Pune. Expert instructors. Flexible batches." />
+  <meta name="description" content="15-day, 30-day driving training programs in Lohegaon. Beginner, advanced, highway and night driving courses. Expert trainers near Apple Hospital, Pune." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      padding: 160px 0 80px;
+      background: linear-gradient(135deg, #1a0000 0%, #3a0a0a 100%);
+    }
+    .page-hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .page-hero p {
+      color: rgba(255,255,255,0.75);
+      font-size: 1.1rem;
+      max-width: 540px;
+    }
+    .page-breadcrumb {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .page-breadcrumb a,
+    .page-breadcrumb span {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .page-breadcrumb a:hover { color: var(--gold); }
+    .page-breadcrumb .sep { color: rgba(255,255,255,0.25); }
+
+    /* Pricing Cards */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .pricing-card {
+      background: var(--white);
+      border: 2px solid var(--mid-gray);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .pricing-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .pricing-card--featured { border-color: var(--red); }
+    .pricing-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--red);
+      color: var(--white);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 20px;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+    .pricing-duration {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--red);
+      margin-bottom: 8px;
+    }
+    .pricing-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 24px;
+    }
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+    .pricing-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .pricing-features li:last-child { border-bottom: none; }
+    .check { color: var(--red); font-weight: 700; flex-shrink: 0; }
+    .pricing-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    /* Module Cards */
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .module-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--red);
+      transition: all 0.3s ease;
+    }
+    .module-card:hover { transform: translateX(4px); }
+    .module-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .module-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .module-card p { font-size: 0.85rem; color: var(--text-muted); }
+  </style>
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="index.html" class="logo-link">
-        <svg class="logo-svg" viewBox="0 0 220 90" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 45 Q5 30 20 25 Q35 35 45 45 Q35 42 25 45Z" fill="#E31E24"/>
-          <path d="M205 45 Q215 30 200 25 Q185 35 175 45 Q185 42 195 45Z" fill="#E31E24"/>
-          <circle cx="110" cy="45" r="28" fill="none" stroke="#1a1a1a" stroke-width="5"/>
-          <line x1="110" y1="17" x2="110" y2="33" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
-          <line x1="110" y1="57" x2="110" y2="73" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
-          <line x1="82" y1="45" x2="98" y2="45" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
-          <line x1="122" y1="45" x2="138" y2="45" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
-          <circle cx="110" cy="45" r="7" fill="#E31E24"/>
-          <path d="M72 30 Q110 10 148 30" fill="#E31E24"/>
-          <text x="110" y="28" text-anchor="middle" font-family="Outfit" font-size="8" fill="#FFD700" font-weight="700">Learn to fly...!</text>
-          <rect x="55" y="72" width="110" height="14" rx="3" fill="#1a1a1a"/>
-          <text x="110" y="82" text-anchor="middle" font-family="Outfit" font-size="6.5" fill="#ffffff" font-weight="600" letter-spacing="0.5">NEW SHREE SAINATH</text>
-        </svg>
-        <span class="logo-text">Sainath <span>Driving School</span></span>
+        <div class="logo-svg-wrap">
+          <svg viewBox="0 0 220 90" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+            <path d="M10,45 Q30,20 55,38" stroke="#E31E24" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M15,50 Q33,28 55,42" stroke="#FFD700" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M210,45 Q190,20 165,38" stroke="#E31E24" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M205,50 Q187,28 165,42" stroke="#FFD700" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="110" cy="45" r="26" fill="none" stroke="#1a1a1a" stroke-width="5"/>
+            <circle cx="110" cy="45" r="8" fill="#1a1a1a"/>
+            <line x1="110" y1="19" x2="110" y2="37" stroke="#1a1a1a" stroke-width="4"/>
+            <line x1="86" y1="57" x2="103" y2="49" stroke="#1a1a1a" stroke-width="4"/>
+            <line x1="134" y1="57" x2="117" y2="49" stroke="#1a1a1a" stroke-width="4"/>
+            <path d="M70,28 Q110,8 150,28" fill="#E31E24"/>
+            <text x="110" y="26" text-anchor="middle" font-family="Outfit,sans-serif" font-size="7" fill="#FFD700" font-weight="700">LEARN TO FLY...!</text>
+            <rect x="58" y="68" width="104" height="14" rx="2" fill="#1a1a1a"/>
+            <text x="110" y="78" text-anchor="middle" font-family="Outfit,sans-serif" font-size="5.5" fill="#FFFFFF" font-weight="700" letter-spacing="0.5">NEW SHREE SAINATH</text>
+          </svg>
+        </div>
+        <div class="logo-text-block">
+          <span class="logo-main">Sainath Driving</span>
+          <span class="logo-sub">School · Lohegaon</span>
+        </div>
       </a>
       <nav class="nav" id="nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="training.html" class="nav-link active">Training</a>
-        <a href="rto-services.html" class="nav-link">RTO Services</a>
+        <a href="rto.html" class="nav-link">RTO Services</a>
         <a href="team.html" class="nav-link">Our Team</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="tel:07775088754" class="btn btn-primary nav-cta">📞 Call Now</a>
+        <a href="tel:07775088754" class="btn btn-primary btn-sm">📞 Call Now</a>
       </nav>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <span class="section-tag" style="margin-bottom:16px;display:inline-block;">Training Programs</span>
-      <h1>Every Program Built Around <span class="highlight">Your Confidence</span></h1>
-      <p>From absolute beginner to advanced driver — we have a structured program that fits your timeline and skill level.</p>
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">›</span>
+        <span style="color:var(--gold)">Training Programs</span>
+      </div>
+      <h1>Training Programs<br><span style="color:var(--red)">Built for Confidence</span></h1>
+      <p>From zero experience to highway ready. Choose a package that fits your schedule and learning pace.</p>
     </div>
   </section>
 
   <!-- PROGRAMS -->
   <section class="section">
     <div class="container">
-      <div class="programs-grid">
-
-        <!-- 15 Day -->
-        <div class="program-card">
-          <div class="program-visual">
-            <div class="program-icon">🚗</div>
-            <div class="program-duration">15</div>
-            <div class="program-dur-label">Day Express Course</div>
-          </div>
-          <div class="program-content">
-            <h3>Express Beginner Course</h3>
-            <p>The fastest path to your driving license. Designed for working professionals with limited time, this intensive 15-day program covers all the essentials — vehicle controls, road rules, parking, and your RTO test preparation — in a structured, daily schedule.</p>
-            <ul class="program-features">
-              <li>Vehicle Familiarization (Day 1–2)</li>
-              <li>Steering & Gear Control (Day 3–5)</li>
-              <li>Road Driving — Real Routes (Day 6–12)</li>
-              <li>Parking, U-Turns & Reversing (Day 13)</li>
-              <li>Mock RTO Test Drive (Day 14)</li>
-              <li>Final Test Support (Day 15)</li>
-              <li>Learner License Guidance</li>
-              <li>Flexible Timing Options</li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary">Enquire About This Course →</a>
-          </div>
+      <div class="section-label">Choose Your Program</div>
+      <h2 class="section-title">Flexible Packages for<br><span class="highlight-red">Every Learner</span></h2>
+      <p class="section-sub">All programs include RTO process guidance, practical sessions on real Lohegaon roads, and test-day support.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-duration">15 Days</div>
+          <div class="pricing-title">Quick Start Program</div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> 15 practical driving sessions</li>
+            <li><span class="check">✓</span> Vehicle controls &amp; basics</li>
+            <li><span class="check">✓</span> City road driving</li>
+            <li><span class="check">✓</span> Parking techniques</li>
+            <li><span class="check">✓</span> RTO test preparation</li>
+            <li><span class="check">✓</span> Learner's License support</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline-dark" style="width:100%;justify-content:center">Enquire Now →</a>
+          <p class="pricing-note">Best for: Learners with some prior exposure</p>
         </div>
-
-        <!-- 30 Day -->
-        <div class="program-card" style="border-color: #E31E24; box-shadow: 0 8px 32px rgba(227,30,36,0.12);">
-          <div class="program-visual">
-            <div class="program-icon">🏅</div>
-            <div class="program-duration">30</div>
-            <div class="program-dur-label">Day Comprehensive Course</div>
-          </div>
-          <div class="program-content">
-            <h3>Comprehensive Confidence Course <span class="featured-badge" style="position:static;transform:none;margin-left:10px;vertical-align:middle;">Recommended</span></h3>
-            <p>The most thorough driving program we offer. Over 30 days, you'll gain the kind of deep, real-world confidence that lasts a lifetime. This course is highly recommended for anyone who wants to feel truly safe and skilled on Pune's roads.</p>
-            <ul class="program-features">
-              <li>Full Vehicle Theory (Week 1)</li>
-              <li>Controlled Environment Practice</li>
-              <li>City & Highway Driving</li>
-              <li>Night Driving Sessions</li>
-              <li>Heavy Traffic Navigation</li>
-              <li>Roundabout & Flyover Driving</li>
-              <li>Full RTO Documentation Support</li>
-              <li>Unlimited Mock Tests</li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary">Enquire About This Course →</a>
-          </div>
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-badge">⭐ Most Popular</div>
+          <div class="pricing-duration">30 Days</div>
+          <div class="pricing-title">Comprehensive Program</div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> 30 daily practical sessions</li>
+            <li><span class="check">✓</span> Complete beginner-to-confident journey</li>
+            <li><span class="check">✓</span> City, highway &amp; night driving</li>
+            <li><span class="check">✓</span> Advanced parking &amp; reversing</li>
+            <li><span class="check">✓</span> Full RTO paperwork support</li>
+            <li><span class="check">✓</span> Test-day accompaniment</li>
+            <li><span class="check">✓</span> Mock RTO test sessions</li>
+            <li><span class="check">✓</span> Personal trainer assignment</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center">Enroll Now →</a>
+          <p class="pricing-note">Best for: First-time learners who want true confidence</p>
         </div>
-
-        <!-- Advanced -->
-        <div class="program-card">
-          <div class="program-visual">
-            <div class="program-icon">🛣️</div>
-            <div class="program-duration" style="font-size:1.2rem;">Custom</div>
-            <div class="program-dur-label">Advanced Modules</div>
-          </div>
-          <div class="program-content">
-            <h3>Advanced Confidence Modules</h3>
-            <p>Already have your license but want to level up? Our advanced modules are targeted sessions that tackle specific skills. Perfect for professionals who drive long distances or anyone who wants to feel more confident in demanding road conditions.</p>
-            <ul class="program-features">
-              <li>Highway Driving (Expressway)</li>
-              <li>Night Driving Confidence</li>
-              <li>Heavy Traffic Mastery</li>
-              <li>Motorway / NH Driving</li>
-              <li>Defensive Driving Techniques</li>
-              <li>Refresher Course (2–5 Days)</li>
-              <li>Custom Session Scheduling</li>
-              <li>One-on-One Coaching</li>
-            </ul>
-            <a href="contact.html" class="btn btn-primary">Book a Custom Module →</a>
-          </div>
+        <div class="pricing-card">
+          <div class="pricing-duration">Advanced</div>
+          <div class="pricing-title">Confidence Booster</div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Highway driving mastery</li>
+            <li><span class="check">✓</span> Night driving sessions</li>
+            <li><span class="check">✓</span> Defensive driving techniques</li>
+            <li><span class="check">✓</span> Expressway etiquette</li>
+            <li><span class="check">✓</span> Emergency handling</li>
+            <li><span class="check">✓</span> Ideal for already-licensed drivers</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline-dark" style="width:100%;justify-content:center">Enquire Now →</a>
+          <p class="pricing-note">Best for: Licensed drivers wanting more confidence</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- WHY OUR TRAINING -->
-  <section class="section bg-light">
+  <!-- CURRICULUM -->
+  <section class="section section-gray">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Training Philosophy</span>
-        <h2 class="section-title">No Rush. No Pressure. <span class="highlight">Just Results.</span></h2>
-        <p class="section-sub">Every student learns at their own pace. Our trainers adapt to you — never the other way around.</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🧘</div>
-          <h3>Calm, Patient Instruction</h3>
-          <p>Our trainers — especially Atish Sir and Shyam Sir — are praised specifically for their calm, never-rushing teaching style. Zero shouting. Zero judgment. Pure support.</p>
+      <div class="section-label">What You'll Learn</div>
+      <h2 class="section-title">A Structured Curriculum<br><span class="highlight-red">Week by Week</span></h2>
+      <div class="modules-grid">
+        <div class="module-card">
+          <div class="module-num">Week 01</div>
+          <h3>Vehicle Familiarisation</h3>
+          <p>Controls, mirrors, seat adjustment, clutch/brake feel, and slow-speed maneuvering in safe areas.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🛣️</div>
-          <h3>Real Pune Roads</h3>
-          <p>Training on actual Lohegaon and Pune roads means you are fully prepared for real traffic — not just a controlled test ground. What you practice is what you'll face on Day 1.</p>
+        <div class="module-card">
+          <div class="module-num">Week 02</div>
+          <h3>Local Road Confidence</h3>
+          <p>Lane discipline, signal usage, left &amp; right turns, navigating roundabouts in Lohegaon.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🕐</div>
-          <h3>Your Schedule, Not Ours</h3>
-          <p>Early morning 7 AM batches, evening 6 PM batches, and weekend slots available. Designed so working professionals never have to choose between work and their license.</p>
+        <div class="module-card">
+          <div class="module-num">Week 03</div>
+          <h3>Traffic &amp; Parking</h3>
+          <p>Peak-hour driving, parallel parking, reverse parking, hill starts, and busy intersection handling.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Week 04</div>
+          <h3>Test Readiness</h3>
+          <p>Mock RTO test routes, figure-8, slope start, and full test-day walkthrough with your trainer.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Advanced</div>
+          <h3>Highway &amp; Night</h3>
+          <p>Pune-Nagar highway driving, lane changing at speed, night visibility, and expressway protocols.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-num">Always</div>
+          <h3>RTO Support</h3>
+          <p>We track your LL and DL application, remind you of appointments, and guide you through every form.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- CTA BANNER -->
   <section class="cta-banner">
     <div class="container cta-inner">
       <div class="cta-text">
-        <h2>Ready to Pick Your Program?</h2>
-        <p>Call us or fill out our enquiry form. We'll help you choose the right course for your needs and timeline.</p>
+        <h2>Ready to Start Training?</h2>
+        <p>Call us today or drop by our office near Apple Hospital, Lohegaon.</p>
       </div>
       <div class="cta-actions">
-        <a href="contact.html" class="btn btn-cta-white">Send an Enquiry</a>
-        <a href="tel:07775088754" class="btn btn-cta-outline">📞 077750 88754</a>
+        <a href="contact.html" class="btn btn-white btn-lg">Book a Session</a>
+        <a href="tel:07775088754" class="btn btn-outline-white btn-lg">📞 077750 88754</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <p class="footer-brand-name">New Shree Sainath<br/><span>Driving School</span></p>
-        <p class="footer-tagline">Building confident drivers in Lohegaon since 2008.</p>
+        <div class="footer-logo-text">New Shree Sainath<br>Driving School</div>
+        <p>Lohegaon's most trusted driving school. Building confident, responsible drivers since 2010.</p>
       </div>
       <div class="footer-links">
         <h4>Quick Links</h4>
         <a href="index.html">Home</a>
         <a href="training.html">Training Programs</a>
-        <a href="rto-services.html">RTO Services</a>
+        <a href="rto.html">RTO Services</a>
         <a href="team.html">Our Team</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Contact Us</a>
       </div>
       <div class="footer-links">
         <h4>Programs</h4>
-        <a href="training.html">15-Day Express Course</a>
+        <a href="training.html">15-Day Quick Start</a>
         <a href="training.html">30-Day Comprehensive</a>
-        <a href="training.html">Highway Driving</a>
-        <a href="training.html">Night Driving</a>
-        <a href="training.html">Refresher Course</a>
+        <a href="training.html">Advanced Driving</a>
+        <a href="rto.html">RTO Assistance</a>
       </div>
       <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p>📍 Shop No. 4, Masulkar Residency,<br/>Near Apple Hospital, Lohegaon, Pune</p>
+        <h4>Contact</h4>
+        <p>📍 Shop No. 4, Masulkar Residency,<br>Near Apple Hospital,<br>Lohegaon, Pune 411047</p>
         <p>📞 <a href="tel:07775088754">077750 88754</a></p>
-        <div class="footer-social">
-          <a href="https://wa.me/917775088754" class="social-btn whatsapp" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="tel:07775088754" class="social-btn call">Call Now</a>
-        </div>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>© 2024 New Shree Sainath Driving School, Lohegaon, Pune. All rights reserved.</p>
+        <p>© 2024 New Shree Sainath Driving School. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <a href="tel:07775088754" class="sticky-call">📞 Call Now — 077750 88754</a>
-  <script src="js/script.js"></script>
+  <a href="tel:07775088754" class="sticky-call">📞 Call Now</a>
+  <script src="script.js"></script>
 </body>
 </html>
